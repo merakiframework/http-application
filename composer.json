@@ -1,0 +1,19 @@
+{
+	"name": "meraki/http-application",
+	"type": "library",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Meraki\\Http\\": "src/"
+		}
+	},
+	"authors": [
+		{
+		"name": "Nathan Bishop",
+		"email": "nbish11@hotmail.com"
+		}
+	],
+	"require": {
+		"php": "^8.1"
+	}
+}
