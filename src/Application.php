@@ -10,6 +10,7 @@ use RuntimeException;
 final class Application
 {
 	public string $name = '';
+	public string $theme = 'default';
 	public object $directories;
 
 	private static array $loadedConfigs = [];
@@ -25,6 +26,14 @@ final class Application
 		return (new self())
 			->createDefaultDirectoryStructure($basePath)
 			->configureFromFile('app.php');
+	}
+
+	public function selectTheme(string $name): self
+	{
+		$copy = clone $this;
+		$copy->theme = $name;
+
+		return $copy;
 	}
 
 	private function configureFromFile(string $filename): self
